@@ -1,11 +1,11 @@
 // What we learnt in express
 
 const router = require("express").Router();
-const userRouter = require("./userRoutes");
-const blogRoutes = require("./blogRoutes");
+const userRouter = require("./user-routes");
+const blogRoutes = require("./post-routes");
 
 //Import our modular routers for users to the blog.
-router.use("./users", userRoutes);
-router.use("./blogs", blogRoutes);
+router.use("./user", userRouter);
+router.use("./post", blogRoutes);
 
 module.exports = router;
